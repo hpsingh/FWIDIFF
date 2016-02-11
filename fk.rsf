@@ -1,0 +1,71 @@
+1.7	sfspike	fwi/kaust/cuda:	harpreet@harpreet-Ideapad-Z570	Tue Feb  2 17:35:02 2016
+
+	d2=5
+	o1=0
+	n2=500
+	o2=0
+	label1="x1"
+	data_format="native_float"
+	label2="x2"
+	esize=4
+	in="/var/tmp/fwi/kaust/cuda/vel.rsf@"
+	unit1="m"
+	unit2="m"
+	d1=5
+	n1=500
+1.7	gpumod.exe	fwi/kaust/cuda:	harpreet@harpreet-Ideapad-Z570	Tue Feb  2 17:49:22 2016
+
+	o1=0
+	d2=5
+	n2=500
+	jgz=0
+	jsx=0
+	fm=15
+	label1="Time"
+	n3=1
+	data_format="native_float"
+	label2="Lateral"
+	jsz=0
+	ng=500
+	label3="Shot"
+	esize=4
+	gxbeg=0
+	in="/var/tmp/fwi/kaust/cuda/shotsa.rsf@"
+	csdgather=0
+	gzbeg=0
+	sxbeg=200
+	unit1="sec"
+	amp=1
+	unit2="m"
+	jgx=1
+	szbeg=0
+	d1=0.0005
+	n1=4000
+1.7	sffft1	fwi/kaust/cuda:	harpreet@harpreet-Ideapad-Z570	Fri Feb  5 20:28:08 2016
+
+	o1=0
+	label1="Frequency"
+	data_format="native_complex"
+	fft_n1=4000
+	esize=8
+	fft_o1=0
+	in="stdout"
+	fft_label1="Time"
+	unit1="1/sec"
+	d1=0.5
+	n1=2001
+	in="stdin"
+
+1.7	sffft3	fwi/kaust/cuda:	harpreet@harpreet-Ideapad-Z570	Fri Feb  5 20:28:08 2016
+
+	d2=0.0002
+	n2=1000
+	fft3_n2=500
+	o2=-0.1
+	fft3_o2=0
+	data_format="native_complex"
+	label2="Wavenumber"
+	fft3_label2="Lateral"
+	esize=8
+	in="/var/tmp/fk.rsf@"
+	unit2="1/m"
